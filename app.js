@@ -7,10 +7,10 @@ app.set("view engine", "ejs") //Aclaramos cual sera el motor del template
 app.set('views', path.resolve(__dirname, 'src','views')); //Aclaramos la carpeta vistas
 app.use(express.static("public")); //Definimos una carpeta  estatica: public.
 
-app.get("/", mainRouter);
+app.use("/", mainRouter);
+
 
 app.listen(3000, function(){ //Corremos el server en escucha
     console.log("El servidor está corriendo en el puerto 3000")
 })
 
-console.log(path.resolve(__dirname, 'src', 'views'))
