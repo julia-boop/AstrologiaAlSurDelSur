@@ -1,3 +1,6 @@
+/* PONERLE UNA TRANSICION ON LOAD PARA QUE APAREZCAN AMBOS ELEMENTOS POR LOS COSTADOS */
+
+
 .presentationContainer{
     display: flex;
     flex-wrap: wrap;
