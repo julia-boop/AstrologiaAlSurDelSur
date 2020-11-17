@@ -7,5 +7,8 @@ module.exports = {
     },
     presentation: function(req, res){
         res.render('presentation')
+    },
+    technique: function(req, res){
+        res.render('technique')
     }
 }

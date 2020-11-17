@@ -1,5 +1,6 @@
 @import'partials/_home.css';
 @import'partials/_presentation.css';
+@import'partials/_technique.css';
 
 *{
     max-width: 100%!important;
@@ -11,6 +12,11 @@
 
 body{
     background-color: rgb(73, 73, 73);
+}
+
+.headerLogo{
+    width: 100px;
+    margin-top: 25px;
 }
 
 footer {

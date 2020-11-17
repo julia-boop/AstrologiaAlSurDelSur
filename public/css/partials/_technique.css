@@ -1,0 +1,36 @@
+.collapseContainer{
+    margin-top: 30px;
+    width: 75%;
+}
+
+.collapseDiv{
+    background-color: rgba(110, 110, 110, 0.74)!important;
+}
+
+.collapseText{
+    background-color: rgba(170, 170, 170, 0.74)!important;
+}
+
+.accordion button{
+    color: rgb(136, 136, 136);
+    text-decoration: none;
+    width: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    transition: background-color 0.7s
+}
+
+.accordion button:hover{
+    color: rgb(136, 136, 136);
+    text-decoration: none;
+    background-color: rgba(209, 208, 208, 0.897)
+}
+
+.accordion button:focus{
+    color: rgb(136, 136, 136);
+    text-decoration: none;
+    background-color: rgb(36, 35, 35);
+    border: 2px solid rgba(209, 208, 208, 0.897);
+    outline: none;
+    box-shadow: none;
+}

@@ -1,16 +1,23 @@
 /* PONERLE UNA TRANSICION ON LOAD PARA QUE APAREZCAN AMBOS ELEMENTOS POR LOS COSTADOS */
 
+@keyframes slide {
+    0%   { transform: translate(0px,0px); }
+    100% { transform: translate(0px,20px); }
+}
 
 .presentationContainer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    animation-name: slide;
+    animation-duration: 3s; 
+    animation-fill-mode: both;  
 }
 
 .presentationImageContainer{
     margin-top: 100px;
     margin-left: 0px;
-    padding-right: 50px;
+    padding-right: 50px;         
 }
 
 .presentationImageContainer img{

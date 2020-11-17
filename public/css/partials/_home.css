@@ -12,10 +12,22 @@
     border-radius: 5px;
     border: none;
     transition: left 0.7s ease;
+    outline: none;
+    box-shadow: none;
+}
+
+.btnMenu:focus{
+    box-shadow: none;
 }
 
 svg{
     padding: 0 auto;
+    outline: none;
+    box-shadow: none;
+}
+
+svg:focus{
+    box-shadow: none;
 }
 
 .line {
@@ -134,7 +146,7 @@ html {
 } 
 
 .menuLogo{
-    width: 250px;
+    width: 150px;
 }
 
 aside nav img{
@@ -142,6 +154,34 @@ aside nav img{
 }
 
 /* ---------- MAIN HOME ------------ */
+@keyframes slide {
+    0%   { transform: translate(0px,0px); }
+    100% { transform: translate(0px,20px); }
+}
+
+.titleHome{
+    background-color: rgb(73, 73, 73);
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.titleHome h3{
+    text-align: center;
+    padding: 5px;
+    color: rgb(173, 173, 173);
+    letter-spacing: 0.1rem;
+    margin-top: 1rem;
+}
+
+.titleHome h5{
+    width: 100%;
+    text-align: center;
+}
+
 .title{
     background-color: rgb(73, 73, 73);
     border-top: 2px solid black;
@@ -153,10 +193,12 @@ aside nav img{
 }
 
 .title h3{
-    margin-top: .5rem;
+    margin: 20px;
     text-align: center;
     padding: 5px;
     color: rgb(173, 173, 173);
+    letter-spacing: 0.1rem;
+    margin-top: 3rem;
 }
 
 .title h5{
@@ -168,6 +210,9 @@ aside nav img{
     padding-top: 50px;
     background-color: rgb(73, 73, 73);
     z-index: 0;
+    animation-name: slide;
+    animation-duration: 3s; 
+    animation-fill-mode: both;  
 }
 
 .homeLogo{
@@ -182,5 +227,8 @@ aside nav img{
 .infoContainer h4{
     margin-top: 20px;
     text-align: center;
+    animation-name: slide;
+    animation-duration: 3s; 
+    animation-fill-mode: both;  
 }
 
