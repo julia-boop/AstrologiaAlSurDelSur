@@ -10,5 +10,9 @@ module.exports = {
     },
     technique: function(req, res){
         res.render('technique')
-    }
+    },
+    investigation: function(req, res){
+        res.render('investigation')
+    },
+    
 }

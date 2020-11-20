@@ -1,0 +1,76 @@
+@keyframes slide {
+    0%   { transform: translate(0px,0px); }
+    100% { transform: translate(0px,15px); }
+}
+
+.registerFormContainer{
+    margin: 50px;
+    width: 100%;
+    animation-name: slide;
+    animation-duration: 2s; 
+    animation-fill-mode: both;  
+}
+
+.registerFormContainer form{
+    background-color: rgba(31, 31, 31, 0.644);
+    border-radius: 5px;
+}
+
+.registerFormContainer form label{
+    background-color: rgba(31, 31, 31, 0.199);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: rgba(209, 208, 208, 0.897);
+    margin: 15px;
+}
+
+.registerFormContainer form input{
+    border-radius: 5px;
+    transition: box-shadow 0.7s;
+}
+
+.registerFormContainer form input:focus{
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #fff;
+    outline: none;
+}
+
+.registerFormContainer form button{
+    margin: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color:rgb(31, 31, 31) ;
+    color: rgb(136, 136, 136);
+    letter-spacing: 0.3rem;
+    transition: background-color 0.7s;
+    text-transform: uppercase;
+}
+
+.registerFormContainer form button:hover{
+    background-color: rgba(209, 208, 208, 0.897)
+}
+
+.registerFormContainer form button:focus{
+    background-color: rgb(36, 35, 35);
+    border: 2px solid rgba(209, 208, 208, 0.897);
+    outline: none;
+}
+
+.registerFormContainer h3{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    margin-bottom: 15px;
+}
+
+.registerFormContainer h3::after{
+    content: "";
+  position: absolute;
+  width: 50%;
+  height: 0.2em;
+  background: black;
+  left: 25%;
+  top: 105%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#726f7a), to(#2c2c2c));
+  background-image: linear-gradient(to right, #1f1c25, #8f8f8f);
+}

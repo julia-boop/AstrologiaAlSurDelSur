@@ -1,6 +1,8 @@
 @import'partials/_home.css';
 @import'partials/_presentation.css';
 @import'partials/_technique.css';
+@import'partials/_investigation.css';
+@import'partials/_loginRegister.css';
 
 *{
     max-width: 100%!important;

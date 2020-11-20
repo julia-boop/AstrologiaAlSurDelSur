@@ -1,6 +1,15 @@
+@keyframes slide {
+    0%   { transform: translate(0px,0px); }
+    100% { transform: translate(0px,20px); }
+}
+
 .collapseContainer{
+    position: relative;
     margin-top: 30px;
     width: 75%;
+    animation-name: slide;
+    animation-duration: 3s; 
+    animation-fill-mode: both;  
 }
 
 .collapseDiv{
@@ -33,4 +42,13 @@
     border: 2px solid rgba(209, 208, 208, 0.897);
     outline: none;
     box-shadow: none;
+}
+
+.accordion button i{
+    background-color: transparent;
+}
+
+.accordion h3{
+    text-align: center;
+    margin-bottom: 20px;
 }

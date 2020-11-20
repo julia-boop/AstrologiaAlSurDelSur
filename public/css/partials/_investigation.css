@@ -1,0 +1,37 @@
+.investigationTitle{
+    text-align: center;
+    margin: 20px;
+}
+
+.articleContainer{
+    margin: 20px;
+    margin-bottom: 50px;
+    border-radius: 3px;
+    transition: 0.7s ease-in-out;
+    background-color:  rgba(209, 208, 208, 0.897);
+    border: 3px solid rgb(73, 73, 73);
+}
+
+.articleContainer:hover{
+    background-color:  rgba(209, 208, 208, 0.616);
+    box-shadow: 0 0 5px 2px #fff;
+    border: 3px solid rgba(209, 208, 208, 0.897);
+}
+
+.articleContainer h3, .articleContainer p{
+    background-color: transparent;
+}
+
+.articleContainer h3, .articleContainer p {
+    text-align: center;
+}
+
+.articleContainer h3{
+    margin-top: 10px;
+}
+
+.articleDate{
+    padding-top: 10px;
+    border-top: 2px solid black;
+}
+

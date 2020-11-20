@@ -1,13 +1,15 @@
 const express = require("express"); //Requerimos express
 const app = express(); //Requerimos su funcion de alto nivel
 const path = require('path'); //Requerimos path
-const mainRouter = require('./src/routers/mainRouter')
+const mainRouter = require('./src/routers/mainRouter');
+const userRouter = require('./src/routers/userRouter');
 
 app.set("view engine", "ejs") //Aclaramos cual sera el motor del template
 app.set('views', path.resolve(__dirname, 'src','views')); //Aclaramos la carpeta vistas
 app.use(express.static("public")); //Definimos una carpeta  estatica: public.
 
 app.use("/", mainRouter);
+app.use("/user", userRouter);
 
 
 app.listen(3000, function(){ //Corremos el server en escucha
