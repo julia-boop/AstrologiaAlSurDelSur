@@ -7,5 +7,8 @@ module.exports = {
     },
     register: function(req, res){
         res.render('register')
+    },
+    account: function(req, res){
+        res.render('account')
     }
 }

@@ -1,0 +1,20 @@
+:root{
+    /* COLORES */
+    --colorOscuro:  rgb(31, 31, 31);
+    --colorMedio: rgb(73, 73, 73);
+    --colorClaro:rgb(136, 136, 136);
+    --colorMasClaro: rgba(209, 208, 208, 0.897);
+
+    /* BOTONES */
+    --botonFondo: rgb(31, 31, 31) ;
+    --botonTexto: rgb(136, 136, 136);
+    --bordeRadio: 5px;
+    --botonTransicion: background-color 0.7s;
+    --botonFondoHover: rgba(209, 208, 208, 0.897);
+    --botonFondoFocus:  rgb(36, 35, 35);
+    --botonBordeFocus: 2px solid rgba(209, 208, 208, 0.897);
+
+    /* TIPOGRAFIA */
+
+    --espaciadoLetra: 0.25rem
+}

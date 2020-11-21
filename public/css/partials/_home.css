@@ -9,7 +9,7 @@
     height: 45px;
     width: 45px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: var(--bordeRadio);
     border: none;
     transition: left 0.7s ease;
     outline: none;
@@ -67,7 +67,7 @@ svg:focus{
 html {
   font-family: Arial;
   font-size: 16px;
-  background: rgb(73, 73, 73);
+  background: var(--colorMedio);
 }
 
 
@@ -160,7 +160,7 @@ aside nav img{
 }
 
 .titleHome{
-    background-color: rgb(73, 73, 73);
+    background-color: var(--colorMedio);
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     margin-top: 40px;
@@ -183,7 +183,7 @@ aside nav img{
 }
 
 .title{
-    background-color: rgb(73, 73, 73);
+    background-color: var(--colorMedio);
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     margin-top: 40px;
@@ -208,7 +208,7 @@ aside nav img{
 
 .homeLogoContainer{
     padding-top: 50px;
-    background-color: rgb(73, 73, 73);
+    background-color: var(--colorMedio);
     z-index: 0;
     animation-name: slide;
     animation-duration: 3s; 

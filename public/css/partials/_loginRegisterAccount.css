@@ -13,24 +13,24 @@
 
 .registerFormContainer form{
     background-color: rgba(31, 31, 31, 0.644);
-    border-radius: 5px;
+    border-radius: var(--bordeRadio);
 }
 
 .registerFormContainer form label{
     background-color: rgba(31, 31, 31, 0.199);
     text-transform: uppercase;
     letter-spacing: 0.3rem;
-    color: rgba(209, 208, 208, 0.897);
+    color: var(--colorMasClaro);
     margin: 15px;
 }
 
 .registerFormContainer form input{
-    border-radius: 5px;
+    border-radius: var(--bordeRadio);
     transition: box-shadow 0.7s;
 }
 
 .registerFormContainer form input:focus{
-    border-radius: 5px;
+    border-radius: var(--bordeRadio);
     box-shadow: 0 0 5px 2px #fff;
     outline: none;
 }
@@ -38,29 +38,34 @@
 .registerFormContainer form button{
     margin: 15px;
     padding: 15px;
-    border-radius: 5px;
-    background-color:rgb(31, 31, 31) ;
-    color: rgb(136, 136, 136);
+    border-radius: var(--bordeRadio);
+    background-color:var(--botonFondo);
+    color: var(--colorClaro);
     letter-spacing: 0.3rem;
-    transition: background-color 0.7s;
+    transition: var(--botonTransicion);
     text-transform: uppercase;
 }
 
 .registerFormContainer form button:hover{
-    background-color: rgba(209, 208, 208, 0.897)
+    background-color: var(--botonFondoHover)
 }
 
 .registerFormContainer form button:focus{
-    background-color: rgb(36, 35, 35);
-    border: 2px solid rgba(209, 208, 208, 0.897);
+    background-color: var(--botonFondoFocus);
+    border: var(--botonBordeFocus);
     outline: none;
 }
 
 .registerFormContainer h3{
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.25rem;
+    letter-spacing: var(--espaciadoLetra);
     margin-bottom: 15px;
+}
+
+.registerFormContainer h3, h5, h6{
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .registerFormContainer h3::after{
@@ -73,4 +78,30 @@
   top: 105%;
   background-image: -webkit-gradient(linear, left top, right top, from(#726f7a), to(#2c2c2c));
   background-image: linear-gradient(to right, #1f1c25, #8f8f8f);
+}
+
+button.editData{
+    margin: 30px;
+    padding: 15px;
+    border-radius: var(--bordeRadio);
+    background-color:var(--botonFondo);
+    color: var(--colorClaro);
+    letter-spacing: 0.3rem;
+    transition: var(--botonTransicion);
+    text-transform: uppercase;
+}
+
+button.editData:hover{
+    background-color: var(--botonFondoHover)
+}
+
+button.editData:focus{
+    background-color: var(--botonFondoFocus);
+    border: var(--botonBordeFocus);
+    outline: none;
+}
+
+#accountContainer{
+    display: none;
+    transition: display 0.7;
 }

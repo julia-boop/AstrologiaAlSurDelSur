@@ -2,18 +2,19 @@
 @import'partials/_presentation.css';
 @import'partials/_technique.css';
 @import'partials/_investigation.css';
-@import'partials/_loginRegister.css';
+@import'partials/_loginRegisterAccount.css';
+@import'partials/_variables.css';
 
 *{
     max-width: 100%!important;
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
-    background-color:  rgb(73, 73, 73);
+    background-color:  var(--colorMedio);
 }
 
 body{
-    background-color: rgb(73, 73, 73);
+    background-color: var(--colorMedio);
 }
 
 .headerLogo{
@@ -21,17 +22,22 @@ body{
     margin-top: 25px;
 }
 
+.footerContainer{
+    width: 100%;
+    z-index: 0;
+}
+
 footer {
-  bottom: 0;
+  bottom: 0%;
   position: fixed;
   width: 100%!important;
   height: 2rem;  
-  background-color: rgb(31, 31, 31);
+  background-color: var(--colorOscuro);
 }
 
 .footer p{
     margin-top: 0.3rem;
-    color: rgb(73, 73, 73);
-    background-color: rgb(31, 31, 31);
+    color: var(--colorMedio);
+    background-color: var(--colorOscuro);
     text-align: center;
 }

@@ -21,25 +21,25 @@
 }
 
 .accordion button{
-    color: rgb(136, 136, 136);
+    color: var(--botonTexto);
     text-decoration: none;
     width: 100%;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
-    transition: background-color 0.7s
+    transition: var(--botonTransicion);
 }
 
 .accordion button:hover{
-    color: rgb(136, 136, 136);
+    color: var(--botonTexto);
     text-decoration: none;
-    background-color: rgba(209, 208, 208, 0.897)
+    background-color: var(--botonFondoHover);
 }
 
 .accordion button:focus{
-    color: rgb(136, 136, 136);
+    color: var(--botonTexto);
     text-decoration: none;
-    background-color: rgb(36, 35, 35);
-    border: 2px solid rgba(209, 208, 208, 0.897);
+    background-color: var(--botonFondoFocus);
+    border: var(--botonBordeFocus);
     outline: none;
     box-shadow: none;
 }

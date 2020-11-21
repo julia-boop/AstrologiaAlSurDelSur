@@ -35,25 +35,25 @@
 .presentationTextContainer button{
     margin-top: 40px;
     padding: 15px;
-    border-radius: 5px;
-    background-color:rgb(31, 31, 31) ;
-    color: rgb(136, 136, 136);
-    letter-spacing: 0.25rem;
-    transition: background-color 0.7s
+    border-radius: var(--bordeRadio);
+    background-color:var(--botonFondo);
+    color: var(--colorClaro);
+    letter-spacing: var(--espaciadoLetra);
+    transition: var(--botonTransicion);
 }
 
 .presentationTextContainer button:hover{
-    background-color: rgba(209, 208, 208, 0.897)
+    background-color: var(--botonFondoHover);
 }
 
 .presentationTextContainer button:focus{
-    background-color: rgb(36, 35, 35);
-    border: 2px solid rgba(209, 208, 208, 0.897);
+    background-color: var(--botonFondoFocus);
+    border: var(--botonBordeFocus);
     outline: none;
 }
 
 .presentationTextContainer button a {
-    color: rgb(136, 136, 136);
+    color: var(--colorClaro);
 }
 
 .presentationTextContainer button a:hover {
