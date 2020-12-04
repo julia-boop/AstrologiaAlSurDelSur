@@ -14,5 +14,7 @@ module.exports = {
     investigation: function(req, res){
         res.render('investigation')
     },
-    
+    talk: function(req, res){
+        res.render('talk')
+    }
 }

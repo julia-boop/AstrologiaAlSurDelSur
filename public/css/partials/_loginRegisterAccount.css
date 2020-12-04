@@ -25,12 +25,12 @@
     margin: 15px;
 }
 
-.registerFormContainer form input{
+.registerFormContainer form input, textarea{
     border-radius: var(--bordeRadio);
     transition: box-shadow 0.7s;
 }
 
-.registerFormContainer form input:focus{
+.registerFormContainer form input:focus, textarea:focus{
     border-radius: var(--bordeRadio);
     box-shadow: 0 0 5px 2px #fff;
     outline: none;
@@ -105,4 +105,9 @@ button.editData:focus{
 #accountContainer{
     display: none;
     transition: display 0.7;
+}
+
+.talkContainer h5{
+    text-align: justify;
+    margin: 30px;
 }
