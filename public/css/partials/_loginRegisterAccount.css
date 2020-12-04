@@ -9,6 +9,7 @@
     animation-name: slide;
     animation-duration: 2s; 
     animation-fill-mode: both;  
+    padding-bottom: 10vh;
 }
 
 .registerFormContainer form{

@@ -20,6 +20,14 @@
     background-color: rgba(170, 170, 170, 0.74)!important;
 }
 
+.accordion{
+    min-height: 100vh;
+    overflow: hidden;
+    padding-bottom: 10rem;
+    display: block;
+    position: relative;
+}
+
 .accordion button{
     color: var(--botonTexto);
     text-decoration: none;

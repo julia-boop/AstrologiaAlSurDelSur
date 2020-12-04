@@ -12,6 +12,7 @@
     animation-name: slide;
     animation-duration: 3s; 
     animation-fill-mode: both;  
+    padding-bottom: 10vh;
 }
 
 .presentationImageContainer{

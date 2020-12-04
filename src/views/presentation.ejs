@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-</head>
+    <%- include('./partials/head') %> 
 <body>
     <div class="container">
     <button class="btnMenu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
@@ -19,7 +13,7 @@
     
     <div class="title">
         <img src="/images/menuLogo.png" alt="" class="headerLogo">
-            <h3 class="">ASTROLOGIA AL SUR DEL SUR</h3>
+            <h3 class="">ASTROLOGIA DEL SUR</h3>
             <img src="/images/menuLogo.png" alt="" class="headerLogo">
         <% let date = new Date %> 
         <h5 class=""><%= `${date.getUTCDate()}, ${(date.getUTCMonth() + 1)}, ${date.getUTCFullYear()}` %> </h5>
@@ -43,8 +37,7 @@
         <div class="presentationContainer ">
             <div class="presentationTextContainer ">
                 <h2>Soy Melina Graves, <br> astróloga e historiadora</h2>
-                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit sed repudiandae rerum itaque ratione quas dignissimos animi est nemo.</h4>
-                <button> <a href="/investigation"> Ver Trabajos </a></button>
+                <h4>Lorem <a href="/technique"> ipsum</a>  dolor sit amet consectetur adipisicing elit. Iusto fugit sed repudiandae rerum itaque ratione quas dignissimos animi est nemo.</h4>
             </div>
             <div class="presentationImageContainer ">
                 <img src="/images/homeLogo.png" alt="">
@@ -52,12 +45,8 @@
         </div>
         </div>
 
-        <div class="footerContainer">
-            <footer class="footer">
-                <p>Coded with love by @juliacorderoo</p>
-            </footer>
-        </div>
-        <script src="/js/home.js" ></script>
-        <script src="/js/presentation.js"></script>
+    <%- include('./partials/footer') %> 
+    <%- include('./partials/scripts') %> 
+
 </body>
 </html>

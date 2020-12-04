@@ -25,18 +25,33 @@ body{
 .footerContainer{
     width: 100%;
     z-index: 0;
+    position: absolute;
+}
+
+.socialMedia{
+    background-color: var(--colorOscuro);  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.socialMedia a i{
+    background-color: var(--colorOscuro);
+    margin-bottom: 15px;
+    margin-top: 15px;
+    color: var(--colorMedio);
 }
 
 footer {
-  bottom: 0%;
-  position: fixed;
+  bottom: -15;
+  position: absolute;
   width: 100%!important;
-  height: 2rem;  
+  height: 10rem;  
   background-color: var(--colorOscuro);
 }
 
 .footer p{
-    margin-top: 0.3rem;
+    margin-top: 20px;
     color: var(--colorMedio);
     background-color: var(--colorOscuro);
     text-align: center;
