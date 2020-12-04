@@ -15,6 +15,7 @@
 
 body{
     background-color: var(--colorMedio);
+    scroll-behavior: smooth;
 }
 
 .headerLogo{
