@@ -82,6 +82,13 @@ footer {
     border: var(--botonBordeFocus);
     outline: none;
 }
+
+@media (max-width: 1060px){
+    .click{
+        left: 215px;
+    }
+}
+
 @media (max-width: 945px){
     .presentationTextContainer{
         margin-left: 0px;
