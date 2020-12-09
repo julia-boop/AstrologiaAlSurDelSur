@@ -166,4 +166,8 @@ footer {
     .menuLogo{
         height: 130px;
     }
+
+    .presentationTextContainer h4{
+        font-size: 17px;
+    }
 }
