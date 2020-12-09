@@ -83,6 +83,12 @@ footer {
     outline: none;
 }
 
+.scroll i {
+    background-color: transparent;
+    width: 75%;
+    height: 75%;
+}
+
 @media (max-width: 1060px){
     .click{
         left: 215px;
