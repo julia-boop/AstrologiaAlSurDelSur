@@ -6,6 +6,8 @@
 .registerFormContainer{
     margin: 50px;
     width: 100%;
+    margin-left: 0px!important;
+    margin-right: 0px!important;
     animation-name: slide;
     animation-duration: 2s; 
     animation-fill-mode: both;  
@@ -105,9 +107,30 @@ button.editData:focus{
 #accountContainer{
     display: none;
     transition: display 0.7;
+    padding-bottom: 13vh;
 }
 
 .talkContainer h5{
-    text-align: justify;
-    margin: 30px;
+    text-align: center;
+    margin: 10px;
+}
+
+.talkContainer a {
+    color: var(--colorOscuro);
+}
+
+.talkContainer a:hover {
+    color: var(--colorOscuro);
+    text-decoration: none;
+}
+
+.talkContainer a:focus {
+    color: var(--colorOscuro);
+    text-decoration: none;
+}
+
+.formContainer{
+    margin-left: 0px;
+    margin-right: -30px;
+    width: 70%;
 }

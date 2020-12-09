@@ -41,6 +41,20 @@
     margin-top: 10px;
 }
 
+.articleContainer a {
+    color: black;
+}
+
+.articleContainer a:hover {
+ text-decoration: none;
+ color: black;
+}
+
+.articleContainer a:focus {
+    text-decoration: none;
+    color: black;
+   }
+
 .articleDate{
     padding-top: 10px;
     border-top: 2px solid black;

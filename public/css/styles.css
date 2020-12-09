@@ -57,3 +57,97 @@ footer {
     background-color: var(--colorOscuro);
     text-align: center;
 }
+
+.scroll{
+    position: fixed;
+    bottom: 25%;
+    z-index: 2000;
+    left: 10%;
+    padding: 15px;
+    border-radius: var(--bordeRadio);
+    background-color:var(--botonFondo);
+    color: var(--colorClaro);
+    font-size: 10px;
+    letter-spacing: 0.3rem;
+    transition: var(--botonTransicion);
+    text-transform: uppercase;
+}
+
+.scroll:hover{
+    background-color: var(--botonFondoHover)
+}
+
+.scroll:focus{
+    background-color: var(--botonFondoFocus);
+    border: var(--botonBordeFocus);
+    outline: none;
+}
+@media (max-width: 945px){
+    .presentationTextContainer{
+        margin-left: 0px;
+    }
+
+    .presentationImageContainer img{
+        width: 350px;
+    }
+}
+
+@media (max-width: 845px) {
+    .headerLogo{
+        display: none;
+    }
+
+    .sidebar{
+        width: 50%;
+    }
+
+    .menuLogo{
+        width: 175px;
+    }
+
+    .click{
+        left: 290px;
+        z-index: 2000;
+    }
+
+    .presentationTextContainer{
+        padding: 45px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .presentationImageContainer img{
+        width:305px
+    }
+
+    .title h3{
+        width: 100%;
+    }
+}
+
+@media (max-width: 845px){
+    .presentationTextContainer{
+        width: 100%;
+    }
+
+    .presentationTextContainer h2, h4{
+        text-align: center;
+    }
+
+    .presentationImageContainer{
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 600px){
+    .btnMenu{
+        left: 20px
+    }
+
+    .click{
+        left:50%
+    }
+}

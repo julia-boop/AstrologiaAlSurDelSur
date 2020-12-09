@@ -28,7 +28,7 @@
 .presentationTextContainer{
     padding: 80px;
     padding-right: 0px;
-    margin-right: 95px;
+    /* margin-right: 95px; */
     z-index: 0;
     width: 50%;
 }

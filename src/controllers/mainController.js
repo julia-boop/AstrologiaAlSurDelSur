@@ -16,5 +16,11 @@ module.exports = {
     },
     talk: function(req, res){
         res.render('talk')
+    },
+    detail: function(req, res){
+        res.render('detail')
+    },
+    forecast: function(req, res){
+        res.render('forecast')
     }
 }

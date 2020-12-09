@@ -7,5 +7,7 @@ router.get('/presentation', mainController.presentation);
 router.get('/technique', mainController.technique);
 router.get('/investigation', mainController.investigation);
 router.get('/talk', mainController.talk)
+router.get('/detail/:articleID', mainController.detail);
+router.get('/forecast', mainController.forecast);
 
 module.exports = router;
