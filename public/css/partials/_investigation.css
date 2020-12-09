@@ -11,6 +11,11 @@
     animation-fill-mode: both;  
 }
 
+.investigationContainer{
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+}
+
 .articleContainer{
     margin: 20px;
     margin-bottom: 50px;
