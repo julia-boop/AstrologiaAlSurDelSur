@@ -99,11 +99,12 @@ footer {
 
     .sidebar{
         width: 50%;
-        height: 115vh;
+        height: 100%;
     }
 
     .menuLogo{
-        width: 75%;
+        width: 200px;
+        height: 130px;
     }
 
     .click{
