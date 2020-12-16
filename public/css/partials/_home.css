@@ -160,7 +160,6 @@ aside nav img{
 }
 
 .titleHome{
-    background-color: var(--colorMedio);
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     margin-top: 40px;
@@ -172,7 +171,7 @@ aside nav img{
 .titleHome h3{
     text-align: center;
     padding: 5px;
-    color: rgb(173, 173, 173);
+    color: var(--colorOscuro);
     letter-spacing: 0.1rem;
     margin-top: 1rem;
 }
@@ -180,10 +179,10 @@ aside nav img{
 .titleHome h5{
     width: 100%;
     text-align: center;
+    color: rgb(119, 118, 118);
 }
 
 .title{
-    background-color: var(--colorMedio);
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     margin-top: 40px;

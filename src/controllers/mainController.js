@@ -22,5 +22,8 @@ module.exports = {
     },
     forecast: function(req, res){
         res.render('forecast')
+    },
+    publish: function(req, res){
+        res.render('publish')
     }
 }

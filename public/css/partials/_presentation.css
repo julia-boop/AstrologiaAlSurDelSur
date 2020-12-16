@@ -5,6 +5,10 @@
     100% { transform: translate(0px,20px); }
 }
 
+.title h3{
+    color: var(--colorOscuro);
+}
+
 .presentationContainer{
     display: flex;
     flex-wrap: wrap;
