@@ -4,6 +4,7 @@
 @import'partials/_investigation.css';
 @import'partials/_loginRegisterAccount.css';
 @import'partials/_variables.css';
+@import'partials/_detail.css';
 
 *{
     max-width: 100%!important;

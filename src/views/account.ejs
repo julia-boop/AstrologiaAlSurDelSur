@@ -30,30 +30,37 @@
                 <li><a href="/talk">Hablemos</a></li>
                 <br>
                 <!-- DESPUES CAMBIAR A CUENTA/LOGOUT -->
-                <li><a href="">Iniciar Sesión</a></li>
-                <li><a href="">Registrarse</a></li>
+                <% if(typeof userLog != 'undefined' && userLog.role == 2) { %> 
+                    <li><a href="/publish">Publicar</a></li>
+                <% } %> 
+
+                <% if(typeof userLog == 'undefined'){ %> 
+                <li><a href="/user/login">Iniciar Sesión</a></li>
+                <li><a href="/user/register">Registrarse</a></li>
+                <% } else { %> 
+                <li><a href="/user/account/<%= userLog.id %> ">Cuenta</a></li>
+                <li><a href="/user/logout">Salir</a></li>
+                <% } %> 
             </ul>
             </nav>
         </aside>
         
         <div class="registerFormContainer row d-flex justify-content-center" id="accountContainer">
-            <h3 class="col-12">Hola, <b>Usuario</b></h3>
-            <h5 class="col-12">Nombre Apellido</h5>
-            <h6 class="col-12">email@email.com</h6>
+            <h3 class="col-12">Hola, <b><%= userLogged.name %> </b></h3>
+            <h5 class="col-12"><%= userLogged.name %> <%= userLogged.last_name %> </h5>
+            <h6 class="col-12"><%= userLogged.email %> </h6>
             <div class="row col-12 d-flex justify-content-center">
                 <button class="col-6 col-md-3 editData" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Editar Datos</button>
             </div>
             <!-- arreglar el form sin d-flex  -->
             <div class="collapse formContainer" id="collapseExample">
-            <form action="" class="col-10 col-md-6 row d-flex justify-content-center collapse" id="collapseExample">
+            <form action="/user/account/<%= userLogged.id %>" method="POST" class="col-10 col-md-6 row d-flex justify-content-center collapse" id="collapseExample">
                 <label for="name" class="col-10 col-md-7">Nombre</label>
-                <input type="text" name="name" class="col-10 col-md-7" id="">
+                <input type="text" name="name" class="col-10 col-md-7" id="" value="<%= userLogged.name %> ">
                 <label for="last_name" class="col-10 col-md-7">Apellido</label>
-                <input type="text" name="last_name" class="col-10 col-md-7">
+                <input type="text" name="last_name" class="col-10 col-md-7" value="<%= userLogged.last_name %> ">
                 <label for="email" class="col-10 col-md-7">Email</label>
-                <input type="email" name="email" class="col-10 col-md-7">
-                <label for="password" class="col-10 col-md-7">Contraseña</label>
-                <input type="password" name="password" class="col-10 col-md-7">
+                <input type="email" name="email" class="col-10 col-md-7" value="<%= userLogged.email %> ">
                 <button type="submit" class="col-10 col-md-7">Guardar Cambios</button>
             </form>
         </div>

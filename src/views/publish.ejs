@@ -30,15 +30,25 @@
                 <li><a href="/forecast">Pronóstico</a></li>
                 <li><a href="/talk">Hablemos</a></li>
                 <br>
+                
+                <% if(typeof userLog != 'undefined' && userLog.role == 2) { %> 
+                    <li><a href="/publish">Publicar</a></li>
+                <% } %> 
+
+                <% if(typeof userLog == 'undefined'){ %> 
                 <li><a href="/user/login">Iniciar Sesión</a></li>
-                <li class="active"><a href="/user/register">Registrarse</a></li>
+                <li><a href="/user/register">Registrarse</a></li>
+                <% } else { %> 
+                <li><a href="/user/account/<%= userLog.id %> ">Cuenta</a></li>
+                <li><a href="/user/logout">Salir</a></li>
+                <% } %> 
             </ul>
             </nav>
         </aside>
 
         <div class="row d-flex justify-content-center">
             <h3 class="col-12">Publicar Articulo</h3>
-            <form action="" method="POST" class="">
+            <form action="/publish" method="POST" class="">
                 <div class="row col-11 d-flex justify-content-center">
                     <label for="title"  class="col-7">Titulo</label>
                     <input type="text" name="title" class="col-7">
@@ -52,7 +62,7 @@
                         <option value="2" class="col-7">Investigacion</option>
                     </select>
                 </div>
-                <textarea name="" class="ckeditor" id="article" cols="30" rows="10">hola</textarea>
+                <textarea name="text" class="ckeditor" id="article" cols="30" rows="10">hola</textarea>
                 <button type="submit">Publicar</button>
             </form>
         </div>
@@ -60,8 +70,6 @@
             CKEDITOR.replace('article')
         </script>
         <script src="//cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
-
-        
     </div>
         
         <%- include('./partials/footer') %> 

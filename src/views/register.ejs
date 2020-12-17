@@ -30,15 +30,25 @@
                 <li><a href="/forecast">Pronóstico</a></li>
                 <li><a href="/talk">Hablemos</a></li>
                 <br>
+                
+                <% if(typeof userLog != 'undefined' && userLog.role == 2) { %> 
+                    <li><a href="/publish">Publicar</a></li>
+                <% } %> 
+
+                <% if(typeof userLog == 'undefined'){ %> 
                 <li><a href="/user/login">Iniciar Sesión</a></li>
-                <li class="active"><a href="/user/register">Registrarse</a></li>
+                <li><a href="/user/register">Registrarse</a></li>
+                <% } else { %> 
+                <li><a href="/user/account/<%= userLog.id %> ">Cuenta</a></li>
+                <li><a href="/user/logout">Salir</a></li>
+                <% } %> 
             </ul>
             </nav>
         </aside>
         
         <div class="registerFormContainer row d-flex justify-content-center">
             <h3 class="col-12">Registrarse</h3>
-            <form action="" class="col-10 col-md-6 row d-flex justify-content-center">
+            <form action="/user/register" method="POST" class="col-10 col-md-6 row d-flex justify-content-center">
                 <label for="name" class="col-10 col-md-7">Nombre</label>
                 <input type="text" name="name" class="col-10 col-md-7" id="">
                 <label for="last_name" class="col-10 col-md-7">Apellido</label>

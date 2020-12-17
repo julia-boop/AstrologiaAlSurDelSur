@@ -21,7 +21,7 @@ module.exports = {
                 allowNull: false
               },
               body:{
-                type: Sequelize.DataTypes.STRING(100),
+                type: Sequelize.DataTypes.TEXT,
                 allowNull:false
               },
               description:{

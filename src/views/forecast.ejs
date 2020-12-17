@@ -30,8 +30,18 @@
                 <li class="active"><a href="/forecast">Pronóstico</a></li>
                 <li><a href="/talk">Hablemos</a></li>
                 <br>
+                
+                <% if(typeof userLog != 'undefined' && userLog.role == 2) { %> 
+                    <li><a href="/publish">Publicar</a></li>
+                <% } %> 
+
+                <% if(typeof userLog == 'undefined'){ %> 
                 <li><a href="/user/login">Iniciar Sesión</a></li>
                 <li><a href="/user/register">Registrarse</a></li>
+                <% } else { %> 
+                <li><a href="/user/account/<%= userLog.id %> ">Cuenta</a></li>
+                <li><a href="/user/logout">Salir</a></li>
+                <% } %> 
             </ul>
             </nav>
         </aside>
@@ -39,12 +49,12 @@
         <h3 class="investigationTitle">Pronósticos</h3>
 
         <div class="investigationContainer d-flex justify-content-around row">
-            <% for(let i = 0 ; i < 10 ; i ++){ %> 
+            <% for(let i = 0 ; i < forecastArticles.length ; i ++){ %> 
                 <div class="articleContainer col-11 col-md-4 col-sm-3">
-                    <a href="/detail/1">
-                        <h3>a Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem commodi eligendi optio odio dicta aperiam dolor ab, maiores repellat?</p>
-                        <p class="articleDate"><%= `${date.getUTCDate()}, ${(date.getUTCMonth() + 1)}, ${date.getUTCFullYear()}` %> </p>
+                    <a href="/detail/<%= forecastArticles[i].id %> ">
+                        <h3><%= forecastArticles[i].title %> </h3>
+                        <p class=""><%= forecastArticles[i].description %> </p>
+                        <p class="articleDate"><%= forecastArticles[i].date %> </p>
                     </a>
                 </div>
             <% } %> 

@@ -29,9 +29,18 @@
                 <li><a href="/forecast">Pronóstico</a></li>
                 <li><a href="/talk">Hablemos</a></li>
                 <br>
-                <li><a href="">Iniciar Sesión</a></li>
-                <li><a href="">Registrarse</a></li>
-            </ul>
+                
+                <% if(typeof userLog != 'undefined' && userLog.role == 2) { %> 
+                    <li><a href="/publish">Publicar</a></li>
+                <% } %> 
+
+                <% if(typeof userLog == 'undefined'){ %> 
+                <li><a href="/user/login">Iniciar Sesión</a></li>
+                <li><a href="/user/register">Registrarse</a></li>
+                <% } else { %> 
+                <li><a href="/user/account/<%= userLog.id %> ">Cuenta</a></li>
+                <li><a href="/user/logout">Salir</a></li>
+                <% } %> 
             </nav>
         </aside>
         <div class="presentationContainer ">

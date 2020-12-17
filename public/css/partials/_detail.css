@@ -1,0 +1,15 @@
+.detailArticleContainer{
+    width: 90%;
+    margin-bottom: 40vh;
+}
+
+.detailArticleContainer h2 {
+    text-align: center;
+    margin: 20px;
+    text-transform: capitalize;
+}
+
+.detailArticleContainer p{
+    text-align: justify;
+}
+

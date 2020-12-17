@@ -9,6 +9,9 @@ router.get('/investigation', mainController.investigation);
 router.get('/talk', mainController.talk)
 router.get('/detail/:articleID', mainController.detail);
 router.get('/forecast', mainController.forecast);
+
 router.get('/publish', mainController.publish);
+router.post('/publish', mainController.post);
+
 
 module.exports = router;
