@@ -17,7 +17,7 @@ module.exports = {
                 }
               },
               title: {
-                type: Sequelize.DataTypes.STRING(150),
+                type: Sequelize.DataTypes.CHAR(255),
                 allowNull: false
               },
               body:{
@@ -25,11 +25,11 @@ module.exports = {
                 allowNull:false
               },
               description:{
-                type: Sequelize.DataTypes.STRING(200),
+                type: Sequelize.DataTypes.CHAR(255),
                 allowNull:false
               },
               date:{
-                type: Sequelize.DataTypes.STRING(20),
+                type: Sequelize.DataTypes.CHAR(255),
                 allowNull:false
               },
             created_at: Sequelize.DataTypes.DATE,

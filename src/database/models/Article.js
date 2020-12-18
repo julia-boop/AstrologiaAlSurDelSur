@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull:false
           },
           title: {
-            type: dataTypes.STRING(150),
+            type: dataTypes.CHAR(255),
             allowNull: false
           },
           body:{
@@ -19,11 +19,11 @@ module.exports = (sequelize, dataTypes) => {
             allowNull:false
           },
           description:{
-            type: dataTypes.STRING(200),
+            type: dataTypes.CHAR(255),
             allowNull:false
           },
           date:{
-            type: dataTypes.STRING(20),
+            type: dataTypes.CHAR(255),
             allowNull:false
           }
     }
