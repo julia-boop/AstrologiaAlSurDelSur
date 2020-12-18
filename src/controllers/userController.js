@@ -9,43 +9,59 @@ module.exports = {
         res.render('login')
     },
     enter: function(req, res){
-        db.User.findOne({
-            where: {
-                email: req.body.email
-            }
-        })
-        .then(function(result){
-            if(bcryptjs.compareSync(req.body.password, result.password)){
-                req.session.userSession = result.id
-                return res.redirect('/')
-            }else{
-                return res.render('login')
-            }
-        })
-        .catch(function(e){
-            return res.send(e)
-        })
+        let errors = validationResult(req);
+
+        if(errors.isEmpty()){
+            db.User.findOne({
+                where: {
+                    email: req.body.email
+                }
+            })
+            .then(function(result){
+                if(bcryptjs.compareSync(req.body.password, result.password)){
+                    req.session.userSession = result.id
+                    return res.redirect('/')
+                }else{
+                    return res.render('login')
+                }
+            })
+            .catch(function(e){
+                return res.send(e)
+            })
+        } else {
+             return res.render('login', {errors:errors.errors});
+        }
+
+  
     },
     register: function(req, res){
         res.render('register')
     },
     save: function(req, res){
-        let newUser = {
-            name: req.body.name,
-            last_name: req.body.last_name,
-            email: req.body.email,
-            password: bcryptjs.hashSync(req.body.password, 12),
-            role:1
+        let errors = validationResult(req);
+
+        if(errors.isEmpty()){
+            let newUser = {
+                name: req.body.name,
+                last_name: req.body.last_name,
+                email: req.body.email,
+                password: bcryptjs.hashSync(req.body.password, 12),
+                role:1
+            }
+    
+            db.User.create(newUser)
+            .then(function(result){
+                req.session.userSession = result.id
+                return res.redirect('/');
+            })
+            .catch(function(e){
+                res.send(e)
+            })
+        } else {
+            return res.render('register', {errors:errors.errors})
         }
 
-        db.User.create(newUser)
-        .then(function(result){
-            req.session.userSession = result.id
-            return res.redirect('/');
-        })
-        .catch(function(e){
-            res.send(e)
-        })
+       
     },
     account: function(req, res){
         db.User.findOne({

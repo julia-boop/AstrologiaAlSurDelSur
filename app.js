@@ -5,6 +5,7 @@ const path = require('path'); //Requerimos path
 const mainRouter = require('./src/routers/mainRouter');
 const userRouter = require('./src/routers/userRouter');
 const port = process.env.PORT || 3000; 
+const methodOverride =  require('method-override');
 const session = require('express-session');
 const sessionToLocals = require('./src/middlewares/sessionToLocals')
 
@@ -16,6 +17,7 @@ app.use(session({secret:'chulalove'}));
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.use(methodOverride('_method')); 
 
 app.use(sessionToLocals);
 

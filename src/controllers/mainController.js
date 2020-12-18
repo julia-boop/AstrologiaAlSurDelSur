@@ -94,5 +94,15 @@ module.exports = {
         .catch(e => {
             return res.send(e);
         })
+    },
+    delete: function(req, res){
+        db.Article.destroy({
+            where: {
+                id: req.params.articleID
+            }
+        })
+        .then(function(result){
+            res.redirect('/')
+        })
     }
 }

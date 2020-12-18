@@ -47,6 +47,9 @@
         </aside>
 
         <div class="detailArticleContainer">
+            <form action="/delete/<%= article.id %>?_method=DELETE" method="POST">
+            <button type="submit">Eliminar Articulo</button>
+            </form>
             <h2><%= article.title %> </h2>
             <p><%- article.body %> </p>
         </div>

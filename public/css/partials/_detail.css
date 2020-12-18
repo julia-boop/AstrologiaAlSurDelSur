@@ -13,3 +13,24 @@
     text-align: justify;
 }
 
+.detailArticleContainer button{
+    margin: 15px;
+    margin-left: 38%;
+    padding: 15px;
+    border-radius: var(--bordeRadio);
+    background-color:var(--botonFondo);
+    color: var(--colorClaro);
+    letter-spacing: 0.3rem;
+    transition: var(--botonTransicion);
+    text-transform: uppercase;
+    font-size: 10px;
+    
+}
+
+.detailArticleContainer button a{
+    color: var(--colorClaro);    
+}
+
+.detailArticleContainer button a:hover{
+    text-decoration: none; 
+}

@@ -51,12 +51,40 @@
             <form action="/user/register" method="POST" class="col-10 col-md-6 row d-flex justify-content-center">
                 <label for="name" class="col-10 col-md-7">Nombre</label>
                 <input type="text" name="name" class="col-10 col-md-7" id="">
+                <% if(typeof errors != 'undefined') {%> 
+                    <% for(let i = 0 ; i < errors.length ; i++) {%> 
+                        <% if(errors[i].param == "name"){ %> 
+                            <small class="mt-1 col-10 col-md-7"><%= errors[i].msg %> </small>
+                        <% } %> 
+                    <% } %> 
+                <% } %> 
                 <label for="last_name" class="col-10 col-md-7">Apellido</label>
                 <input type="text" name="last_name" class="col-10 col-md-7">
+                <% if(typeof errors != 'undefined') {%> 
+                    <% for(let i = 0 ; i < errors.length ; i++) {%> 
+                        <% if(errors[i].param == "last_name"){ %> 
+                            <small class="mt-1 col-10 col-md-7"><%= errors[i].msg %> </small>
+                        <% } %> 
+                    <% } %> 
+                <% } %> 
                 <label for="email" class="col-10 col-md-7">Email</label>
                 <input type="email" name="email" class="col-10 col-md-7">
+                <% if(typeof errors != 'undefined') {%> 
+                    <% for(let i = 0 ; i < errors.length ; i++) {%> 
+                        <% if(errors[i].param == "email"){ %> 
+                            <small class="mt-1 col-10 col-md-7"><%= errors[i].msg %> </small>
+                        <% } %> 
+                    <% } %> 
+                <% } %> 
                 <label for="password" class="col-10 col-md-7">Contraseña</label>
                 <input type="password" name="password" class="col-10 col-md-7">
+                <% if(typeof errors != 'undefined') {%> 
+                    <% for(let i = 0 ; i < errors.length ; i++) {%> 
+                        <% if(errors[i].param == "password"){ %> 
+                            <small class="mt-1 col-10 col-md-7"><%= errors[i].msg %> </small>
+                        <% } %> 
+                    <% } %> 
+                <% } %> 
                 <button type="submit" class="col-10 col-md-7">Registrarse</button>
             </form>
         </div>
