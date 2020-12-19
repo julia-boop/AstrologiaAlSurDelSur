@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull:false
           },
           title: {
-            type: dataTypes.CHAR(255),
+            type: dataTypes.TEXT,
             allowNull: false
           },
           body:{
@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull:false
           },
           description:{
-            type: dataTypes.CHAR(255),
+            type: dataTypes.TEXT,
             allowNull:false
           },
           date:{
