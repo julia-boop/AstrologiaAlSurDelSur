@@ -2,7 +2,7 @@
   "name": "astro",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "start": "node app.js"
   },
@@ -22,7 +22,7 @@
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
-    "express-validator": "^6.8.0",
+    "express-validator": "^6.8.1",
     "method-override": "^3.0.0",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.6",
