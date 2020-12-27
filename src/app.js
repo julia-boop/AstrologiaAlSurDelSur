@@ -12,7 +12,7 @@ const sessionToLocals = require('./middlewares/sessionToLocals')
 app.set("view engine", "ejs") //Aclaramos cual sera el motor del template
 app.set('views', path.join(__dirname, 'views')); //Aclaramos la carpeta vistas
 app.use(express.static(path.join(__dirname, '../public'))); //Definimos una carpeta  estatica: public.
-app.use(session({secret:'chulalove'}));
+app.use(session({secret:process.env.SESSION}));
 
 
 app.use(express.urlencoded({extended: false}));
