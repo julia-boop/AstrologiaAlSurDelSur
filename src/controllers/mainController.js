@@ -1,6 +1,9 @@
+require('dotenv').config();
+
 const fs = require('fs');
 const path = require('path');   
 const db = require('../database/models');
+const nodemailer = require('nodemailer');
 
 
 module.exports = {
@@ -35,6 +38,31 @@ module.exports = {
     },
     talk: function(req, res){
         res.render('talk')
+    },
+    message: async function(req, res){
+        let transporter = await nodemailer.createTransport({
+            host: "plesk.ar.conectemos.com",
+            port: 25,
+            auth: {
+              user: process.env.MAIL_USER,
+              pass: process.env.MAIL_PASS
+            }
+        });
+        let mailOptions = {
+            from: req.body.email,
+            to: process.env.MAIL_USER,
+            text: (req.body.message != null || req.body.message != '') ? `${req.body.name} ${req.body.last_name} envio el siguiente mensaje => ${req.body.message}` : 'El usuario no adjunto ningun comentario'
+        };
+          
+        transporter.sendMail(mailOptions, function(error, info){
+            if (error) {
+              console.log(error);
+            } else {
+              console.log('Email sent: ' + info.response);
+            }
+        }); 
+
+        return res.render('talk')
     },
     detail: function(req, res){
 
