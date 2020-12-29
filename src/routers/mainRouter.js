@@ -4,7 +4,7 @@ const mainController = require('../controllers/mainController')
 
 router.get('/', mainController.home);
 router.get('/presentation', mainController.presentation);
-router.get('/technique', mainController.technique);
+// router.get('/technique', mainController.technique);
 router.get('/investigation', mainController.investigation);
 
 router.get('/talk', mainController.talk);
