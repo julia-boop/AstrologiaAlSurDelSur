@@ -115,6 +115,11 @@ button.editData:focus{
     margin: 10px;
 }
 
+.talkContainer h6{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .talkContainer a {
     color: var(--colorOscuro);
 }

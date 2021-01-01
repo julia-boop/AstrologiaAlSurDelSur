@@ -11,6 +11,8 @@
 
 .detailArticleContainer p{
     text-align: justify;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .detailArticleContainer button{

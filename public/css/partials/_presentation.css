@@ -37,9 +37,10 @@
     width: 50%;
 }
 
-.presentationTextContainer h4{
+.presentationTextContainer h5{
     text-align: justify;
     margin: 15px;
+    line-height: 35px;
 }
 
 .presentationTextContainer button{
