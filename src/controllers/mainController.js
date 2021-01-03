@@ -42,7 +42,7 @@ module.exports = {
     message: async function(req, res){
         let transporter = await nodemailer.createTransport({
             host: "plesk.ar.conectemos.com",
-            port: 25,
+            port: 465,
             secure: true,
             auth: {
               user: process.env.MAIL_USER,
