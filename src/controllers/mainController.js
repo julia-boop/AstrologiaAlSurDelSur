@@ -134,5 +134,32 @@ module.exports = {
         .then(function(result){
             res.redirect('/')
         })
+    },
+    edit: function(req, res){
+        db.Article.findOne({
+            where:{
+                id: req.params.articleID
+            }
+        })
+        .then(function(article){
+            res.render('edit', {article:article})
+        })
+    },
+    save: function(req, res){
+        let articleUpdate = {
+            category_id: req.body.category_id,
+            title: req.body.title,
+            body: req.body.body,
+            description: req.body.description,
+            date: req.body.date
+        }
+        db.Article.update(articleUpdate, {
+            where: {
+                id: req.params.articleID
+            }
+        })
+        .then(function(result){
+            res.redirect('/detail/'+req.params.articleID)
+        })
     }
 }

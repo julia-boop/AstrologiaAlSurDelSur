@@ -13,6 +13,8 @@ router.post('/message', mainController.message);
 router.get('/detail/:articleID', mainController.detail);
 router.get('/forecast', mainController.forecast);
 router.delete('/delete/:articleID', mainController.delete);
+router.get('/edit/:articleID', mainController.edit);
+router.put('/edit/:articleID', mainController.save);
 
 router.get('/publish', mainController.publish);
 router.post('/publish', mainController.post);

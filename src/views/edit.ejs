@@ -26,7 +26,7 @@
                 <li class=""><a href="/">Inicio</a></li>
                 <li class=""><a href="/presentation">Presentación</a></li>
                 <!-- <li class=""><a href="/technique">Técnica</a></li> -->
-                <li class=""><a href="/investigation">Investigación</a></li>
+                <li><a href="/investigation">Investigación</a></li>
                 <li><a href="/forecast">Pronóstico</a></li>
                 <li><a href="/talk">Hablemos</a></li>
                 <br>
@@ -46,24 +46,34 @@
             </nav>
         </aside>
 
-        <div class="detailArticleContainer">
-            <% if(typeof userLog != 'undefined' && userLog.role == 2) { %> 
-                <form action="/delete/<%= article.id %>?_method=DELETE" method="POST">
-                    <button type="submit">Eliminar Articulo</button>
-                </form>
-            <% } %> 
-            <% if(typeof userLog != 'undefined' && userLog.role == 2) { %> 
-                <form action="/edit/<%= article.id %>" method="GET">
-                    <button type="submit">Editar Articulo</button>
-                </form>
-            <% } %> 
-            <h2><%= article.title %> </h2>
-            <p><%- article.body %> </p>
+        <div class="row d-flex justify-content-center">
+            <h3 class="col-12">Editar Articulo</h3>
+            <form action="/edit/<%= article.id %>?_method=PUT " method="POST" class="">
+                <div class="row col-11 d-flex justify-content-center">
+                    <label for="title"  class="col-7">Titulo</label>
+                    <input type="text" name="title" class="col-7" value="<%= article.title %> ">
+                    <label for="description" class="col-7">Descripcion</label>
+                    <textarea name="description" id="" cols="50" rows="5" class="col-7"><%= article.description %> </textarea>
+                    <label for="date" class="col-7">Fecha</label>
+                    <input type="text" name="date" class="col-7" value="<%= article.date %> ">
+                    <label for="category" class="col-7">Selecciona una categoria</label>
+                    <select name="category" id="" class="col-7">
+                        <option value="1" class="col-7" <%= (article.category_id == 1) ? 'selected' : '' %> >Pronostico</option>
+                        <option value="2" class="col-7" <%= (article.category_id == 2) ? 'selected' : '' %> >Investigacion</option>
+                    </select>
+                </div>
+                <textarea name="text" class="ckeditor" id="article" cols="30" rows="50"><%= article.body %> </textarea>
+                <button type="submit">Publicar</button>
+            </form>
         </div>
-
+        <script>
+            CKEDITOR.replace('article')
+        </script>
+        <script src="//cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
+    </div>
         
-        </div>
-        </div>
-        <button class="scroll d-none"><i class="fas fa-arrow-up fa-2x"></i></button>
         <%- include('./partials/footer') %> 
         <%- include('./partials/scripts') %> 
+
+</body>
+</html>
