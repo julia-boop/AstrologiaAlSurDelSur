@@ -5,6 +5,7 @@
 @import'partials/_loginRegisterAccount.css';
 @import'partials/_permanent.css';
 @import'partials/_detail.css';
+@import'partials/_publishEdit.css';
 
 *{
     max-width: 100%!important;

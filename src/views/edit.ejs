@@ -46,7 +46,7 @@
             </nav>
         </aside>
 
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center registerFormContainer">
             <h3 class="col-12">Editar Articulo</h3>
             <form action="/edit/<%= article.id %>?_method=PUT " method="POST" class="">
                 <div class="row col-11 d-flex justify-content-center">
@@ -62,7 +62,7 @@
                         <option value="2" class="col-7" <%= (article.category_id == 2) ? 'selected' : '' %> >Investigacion</option>
                     </select>
                 </div>
-                <textarea name="text" class="ckeditor" id="article" cols="30" rows="50"><%= article.body %> </textarea>
+                <textarea name="text" class="ckeditor" id="article" cols="50" rows="50"><%= article.body %> </textarea>
                 <button type="submit">Publicar</button>
             </form>
         </div>
