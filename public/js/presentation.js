@@ -9,3 +9,11 @@ window.addEventListener('load', function(){
     textContainer.classList.toggle('.slide-left');
     imgContainer.classList.toggle('.slide-right')
 })
+
+
+
+
+
+
+
+

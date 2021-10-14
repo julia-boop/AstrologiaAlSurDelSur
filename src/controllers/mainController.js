@@ -53,7 +53,7 @@ module.exports = {
             from: req.body.email,
             to: process.env.MAIL_USER,
             subject: req.body.title,
-            text: (req.body.message != null || req.body.message != '') ? `${req.body.name} ${req.body.last_name} envio el siguiente mensaje => ${req.body.message}` : 'El usuario no adjunto ningun comentario'
+            text: (req.body.message != null || req.body.message != '') ? `${req.body.email} envio el siguiente mensaje => ${req.body.message}` : 'El usuario no adjunto ningun comentario'
         };
           
         transporter.sendMail(mailOptions, function(error, info){
